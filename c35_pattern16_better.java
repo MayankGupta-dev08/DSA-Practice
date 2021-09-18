@@ -1,3 +1,4 @@
+// Pascal Triangle
 import java.util.Scanner;
 
 public class c35_pattern16_better {

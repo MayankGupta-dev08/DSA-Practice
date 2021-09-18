@@ -1,0 +1,37 @@
+Types of Apps that can be developed from Java
+    1.  Desktop app
+    2.  Business app (client - server)
+    3.  Web based app
+    4.  Cloud based app
+    5.  Distributed app (2+3+4)
+    6.  Mobile Apps
+    7.  Devices 
+    8.  Animations/Games
+
+11 Buzz words of Java:-
+    *   Simple
+    *   Secure - all java program runs inside jvm which makes its secure from malcious softwares and viruses
+    *   OOP
+    *   Robust(Strong) - as it has Exception handling as it can handle run time errors if we handle all possible exceptions.
+    *   Multi threaded - multiple tasks can run at a time
+    *   Architectural Neural - java can run on any type of hardware as it doesn't depends on OS as it runs inside jvm so if jvm is available for that hardware than we can run java.
+    *   Interpreted - jvm (java virtual machine is interpreted)
+    *   High Performance - java is a high speed interpreter language as lang before it which used interpreter were quite slow
+    *   Distributed - java is useful for distributed systems
+    *   Dynamic - objects are dynamic, its linking (runtime linking) with the methods and classes are dynamic 
+    *   Portable - java is portable i.e. platform independent
+
+Why and How Java is platform independent?
+    In C and C++ (compiler based language), compiler is used as to convert our written source code (.cpp) into machine code (.exe) which then gets executed.
+
+    Java and JavaScript are interpreter based languages which need a browser to translate it and execute it in one go.
+
+        Difference b/w compiler and interpreter
+        1. compiler comiles only once and makes an .exe and then it gets executed everytime we want to execute that code
+            where as interpreter translates everytime we want to execute our code
+        2.  complier generates a seperate machine code file where as interpreter doesn't.
+        3.  compiled programs can run independently (independent of compiler once compiled.), interpreted programs can't.
+        4.  compiled programs are faster as they run independently, interpreted programs runs slower as they run inside the interpreter.
+    
+    Java is a hybrid language which uses both compiler and interpreter.
+        Firstly, our source code is compiled by compiler to make it into a byte code (not macine code) which is error free and then the interpreter (jvm) converts it into a machine code and execute it also.

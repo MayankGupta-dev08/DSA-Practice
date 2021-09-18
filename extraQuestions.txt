@@ -1,0 +1,62 @@
+Question 1: Following is the code for Largest 3 digit number from the 4 digit number:
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class BruteForce {
+
+    public static void main(String[] args){
+        Scanner scn = new Scanner(System.in);
+
+        int n = scn.nextInt();
+        //count of digits in n
+        int temp=n;
+        int count=0;
+           while(temp!=0){
+               count++;
+               temp=temp/10;
+           }
+
+        int max=0;
+        for(int i=count; i>=1; i--){
+
+            int ans = (int)(n/Math.pow(10, i))*(power(10, i-1)) + (n%(power(10, i-1)));
+
+            if(ans>max){
+                max=ans;
+            }
+
+        }
+
+        System.out.println(max);
+
+    }
+
+    public static int power(int x, int n){
+        int ans=1;
+        for(int i=1; i<=n; i++){
+            ans=ans*x;
+        }
+
+        return ans;
+    }
+
+
+}
+
+Dry run this code for n=8943 and try to appreciate how function calling works. 
+Note: The video solution and complete dry on this question will be shared tomorrow. Today, you should try to solve it and get involved in it. 
+
+Question 2: Probability Question
+An urn contains 8 balls : 4 red , 2 blue and 2 green. Now n balls are drawn out of the urn. Calculate the probability that out of n drawn balls exactly x balls are red.
+Find your answer multiplied by 100 and return the integer part. 
+All required values for computation will be in integer range.
+x is always less than equal to 4 and x is always less than equal to n. 
+
+Input format :
+    Two spaced integers : n and x
+Output format :
+    Integer part of (Probability * 100). 
+
+Note: The video solution and complete dry on this question will be shared tomorrow. Today, you should try to solve it and get involved in it. 
+
