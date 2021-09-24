@@ -1,5 +1,5 @@
 import java.util.*;
-public class c42_pattern23 {
+public class c42_pattern23_v1 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
@@ -10,13 +10,14 @@ public class c42_pattern23 {
             for (int j = 1; j <= out_sp; j++)
                 System.out.print("  ");
                 
-                for (int j = 1; j <= stars; j++)
+            for (int j = 1; j <= stars; j++){
                 if(i>1 && i<=n/2 && j>1 && j<stars){
                     System.out.print("  ");
                 }else{
                     System.out.print("* ");
                 }
-
+            }
+            
             if(i<=n/2){
                 stars-=2;
                 out_sp++;

@@ -10,6 +10,13 @@ public class c52_arraysBasics01 {
         
         arr = new int[n];
         
+        System.out.println("Just created array and printing it without assigning any values:-");
+        for (int i = 0; i < arr.length; i++)
+            System.out.print(arr[i]+" ");   //by default all will be 0
+        System.out.println();
+        
+
+        System.out.println("Now assigning values to elements");
         for (int i = 0; i < arr.length; i++){
             System.out.print("Enter "+(i+1)+" element of array: ");
             arr[i] = scn.nextInt();
@@ -26,6 +33,10 @@ public class c52_arraysBasics01 {
 
 /* 
 Enter the number of elements in array: 5
+Enter the number of elements in array:5
+Just created array and printing it without assigning any values:-
+0 0 0 0 0 
+Now assigning values to elements
 Enter 1 element of array: 56
 Enter 2 element of array: 37
 Enter 3 element of array: 91

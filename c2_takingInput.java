@@ -5,12 +5,18 @@ public class c2_takingInput{
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter your first name: ");
-        String fname = input.next();    //for taking input as string
+        String fname = input.next();    //for taking input as string till first space
 
         System.out.println("Enter your last name: ");
         String lname = input.next();
 
         System.out.println("Your full name is: "+fname+" "+lname);
+        
+        input.nextLine();   //used for flusing the enter which was used in next.int
+        
+        String sent = input.nextLine();
+        System.out.println("Sentence: "+sent);
+
 
         // for taking input as integer
         int num = input.nextInt();

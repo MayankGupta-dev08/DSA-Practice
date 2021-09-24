@@ -4,8 +4,9 @@ public class c45_digitFrequencyInNumber {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         int d = scn.nextInt();
-        int f = getDigitFrequency(n, d);
         scn.close();
+        
+        int f = getDigitFrequency(n, d);
         System.out.println(f);
       }
     
