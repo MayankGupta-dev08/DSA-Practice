@@ -12,7 +12,9 @@ public class c2_takingInput{
 
         System.out.println("Your full name is: "+fname+" "+lname);
         
-        input.nextLine();   //used for flusing the enter which was used in next.int
+        input.nextLine();   //used for flushing the enter which was used in next.int
+        // above line is req only when we had used next(), nextInt() or nextFloat() before a nextLine(). If none of the mentioned is used before a nextLine than we can directly use a nextLine() comfortably.
+        // also we can use back to back any number of nextLine() or next() after any nextLine() without any need to flush the enter
         
         String sent = input.nextLine();
         System.out.println("Sentence: "+sent);

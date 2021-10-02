@@ -1,5 +1,5 @@
 import java.util.*;
-public class c79_2DArrays_basics1 {
+public class c79_2darray_basics1 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int m = scn.nextInt();

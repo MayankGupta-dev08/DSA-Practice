@@ -1,5 +1,5 @@
 // import java.util.*;
-public class c79_2DArrays_basics2 {
+public class c79_2darray_basics2 {
     public static void main(String[] args) {
         // int[][] arr = new int[2][2];     //2d Square array
         // int[][] arr = new int[2][3];     //2d rectangle array
