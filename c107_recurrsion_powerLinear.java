@@ -7,7 +7,7 @@ public class c107_recurrsion_powerLinear {
         int n = scn.nextInt();
         scn.close();
         if (n < 0) {
-            float fans = (float) powerLinear(x, n * (-1));
+            float fans = (float) powerLinear(x, n * (-1));  //  multiplied by -1 inorder to make the power positive
             System.out.println(1 / fans);
         } else {
             int ans = powerLinear(x, n);

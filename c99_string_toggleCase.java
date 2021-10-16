@@ -10,14 +10,17 @@ public class c99_string_toggleCase {
     }
 
     public static String toggleCase(String str) {
-        String ans = "";
+        StringBuilder ans = new StringBuilder();
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
-            if(Character.isUpperCase(ch))
-                ans += Character.toLowerCase(ch);
-            else
-                ans += Character.toUpperCase(ch);
+            if (Character.isUpperCase(ch)) {
+                ch = Character.toLowerCase(ch);
+                ans.append(ch);
+            } else {
+                ch = Character.toUpperCase(ch);
+                ans.append(ch);
+            }
         }
-        return ans;
+        return ans.toString();
     }
 }
