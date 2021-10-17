@@ -27,8 +27,15 @@ public class c117_recurrsion_AL_printAllSubsequences {
         ArrayList<String> myRes = new ArrayList<>();
         for (String recrStr : recurrRes) {
             myRes.add("" + recrStr);
+        }
+        for (String recrStr : recurrRes) {
             myRes.add(ch + recrStr);
         }
         return myRes;
     }
 }
+
+// Total number of subsequences = 2^n
+
+// abcd
+// [, d, c, cd, b, bd, bc, bcd, a, ad, ac, acd, ab, abd, abc, abcd]

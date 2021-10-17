@@ -36,6 +36,8 @@ public class c103_string_printAllPermutations_iteratively {
     }
 }
 
+// Total no. of permutations = n!
+
 // sample input
 // abc
 // sample output
