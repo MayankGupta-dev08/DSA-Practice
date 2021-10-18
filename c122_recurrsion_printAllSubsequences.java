@@ -21,3 +21,13 @@ public class c122_recurrsion_printAllSubsequences {
         allSubsequences_recurrsion(newIpStr, opStr + ch);
     }
 }
+
+// abc
+//
+// c
+// b
+// bc
+// a
+// ac
+// ab
+// abc
