@@ -1,3 +1,6 @@
+/* Time Complexity of bubble sort is O(n*n)
+    -> And Space Complexity is O(1) */
+
 import java.util.Scanner;
 
 public class c138_tcNsc_bubbleSort {

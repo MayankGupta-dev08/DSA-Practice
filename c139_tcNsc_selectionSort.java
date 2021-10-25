@@ -1,3 +1,6 @@
+/* Time Complexity of selection sort is O(n*n)
+    -> And Space Complexity is O(1) */
+
 import java.util.Scanner;
 
 public class c139_tcNsc_selectionSort {

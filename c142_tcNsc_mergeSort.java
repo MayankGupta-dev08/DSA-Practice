@@ -1,3 +1,6 @@
+/* Time Complexity of merge sort is O(n*logn) 
+    -> And Space Complexity is O(n) */
+
 import java.util.Scanner;
 
 public class c142_tcNsc_mergeSort {

@@ -1,3 +1,6 @@
+/* Time Complexity of insertion sort is O(n*n)
+    -> And Space Complexity is O(1) */
+
 import java.util.Scanner;
 
 public class c140_tcNsc_insertionSort {
@@ -16,7 +19,8 @@ public class c140_tcNsc_insertionSort {
     }
 
     // inserting ith idx element in its right place in the part of the array before
-    // it, in this also n-1 outer iterations (start from i=1 as want to compare it with i=0).
+    // it, in this also n-1 outer iterations (start from i=1 as want to compare it
+    // with i=0).
     // we will pause the inner iteration for an ith value as soon as the current jth
     // idx element is found to be greater that its prev element is the array.
     public static void insertionSort(int[] arr) {
