@@ -17,49 +17,46 @@ public class c150_tcNts_radixSort {
         }
         scn.close();
 
-        int[] ans = countSort(arr);
-        arr = ans;
+        radixSort(arr);
         printArray(arr);
     }
 
-    // time complexity is O(n)
-    public static int[] countSort(int[] arr) {
-        // finding the min and max value of the array
+    public static void radixSort(int[] arr) {
         int max = Integer.MIN_VALUE;
-        int min = Integer.MAX_VALUE;
-        for (int i = 0; i < arr.length; i++) {
-            max = Math.max(max, arr[i]);
-            min = Math.min(min, arr[i]);
+        for (int val : arr) {
+            max = Math.max(max, val);
         }
 
-        // creating freq array which later will be used as prefixSum array
-        int[] freq = new int[max - min + 1];
+        int exp = 1;
+        while (exp <= max) {
+            countSort(arr, exp);
+            exp *= 10;
+        }
+    }
+
+    public static void countSort(int[] arr, int exp) {
+        int[] freq = new int[10]; // since only 10 digits from 0 to 9
         for (int i = 0; i < arr.length; i++) {
-            int valIdx = arr[i] - min; // becoz ideally idx of min will be 0 in frq array
+            int valIdx = ((arr[i] / exp) % 10);
             freq[valIdx]++;
         }
 
-        // now converting our freq array into prefix sum array
         int[] prefixSum = freq;
         for (int i = 1; i < prefixSum.length; i++) {
             prefixSum[i] += prefixSum[i - 1];
         }
 
         int[] ans = new int[arr.length];
-        // reverse traversing arr & finding correctIdx of arr[i] and inseting arr[i] at
-        // correctIdx in ans
         for (int i = arr.length - 1; i >= 0; i--) {
-            int val = arr[i];
-            int correctIdx = prefixSum[val - min] - 1;
-            ans[correctIdx] = val;
-            prefixSum[val - min]--;
+            int val = ((arr[i] / exp) % 10);
+            int correctIdx = prefixSum[val] - 1;
+            ans[correctIdx] = arr[i]; // adding original value of arr[i]
+            prefixSum[val]--;
         }
 
-        // finally putting all values of ans into arr
-        // for (int i = 0; i < ans.length; i++) {
-        // arr[i] = ans[i];
-        // }
-        return ans;
+        for (int i = 0; i < ans.length; i++) {
+            arr[i] = ans[i];
+        }
     }
 
     public static void printArray(int[] arr) {

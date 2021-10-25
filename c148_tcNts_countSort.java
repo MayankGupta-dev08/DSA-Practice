@@ -1,6 +1,6 @@
 /* Count Sort - used for sorting those arrays which have very large no. of data but the range of min value and max value in the data is not that large or comparitively small. */
 
-/* Time Complexity of quick sort is O(n*n) 
+/* Time Complexity of count sort is O(n) 
     -> And Space Complexity is O(n) 
     --> Important thing about count sort is that it is a stable sorting technique.
         => as if two things have same value then the one which was earlier encountered in the array will come earlier. */
