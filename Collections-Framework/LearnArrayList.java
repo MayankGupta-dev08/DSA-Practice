@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Iterator;
+// import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -19,7 +19,7 @@ public class LearnArrayList {
         list.add(1, 50); // This will add 50 at index 1. All the other elements will be shifted to right.
         System.out.println(list);
 
-        List<Integer> newList = new ArrayList(); // Creating a new List which will be added to original list.
+        List<Integer> newList = new ArrayList<>(); // Creating a new List which will be added to original list.
         newList.add(150);
         newList.add(160);
 
