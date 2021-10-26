@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class c153_dp_countPathsClimbingStairsWithJumps {
+public class c157_dp_countPathsClimbingStairsWithJumps {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

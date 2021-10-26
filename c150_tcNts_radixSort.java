@@ -1,8 +1,8 @@
-/* Count Sort - used for sorting those arrays which have very large no. of data but the range of min value and max value in the data is not that large or comparitively small. */
+/* Radix Sort - generally used for sorting arrays whose elements are in combination of two, three or more things which have their own priority for sort, for example dates --> dd-mm-yyyy, highest precedence is for year, then month and then date, but for each of them they have their own sorting range and order. */
 
 /* Time Complexity of quick sort is O(n*n) 
     -> And Space Complexity is O(n) 
-    --> Important thing about count sort is that it is a stable sorting technique.
+    --> Important thing about radix sort is that it is a stable sorting technique, as it uses count sort for doing its work.
         => as if two things have same value then the one which was earlier encountered in the array will come earlier. */
 
 import java.util.*;

@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class c152_dp_nthFibonacci {
+public class c155_dp_nthFibonacci {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

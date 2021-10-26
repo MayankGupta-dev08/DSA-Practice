@@ -4,7 +4,7 @@
 
 import java.util.Scanner;
 
-public class c153_dp_countStairPaths {
+public class c156_dp_countStairPaths {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

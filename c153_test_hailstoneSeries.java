@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class c152_hailstoneSeries{
+public class c153_test_hailstoneSeries{
 
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);

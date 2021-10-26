@@ -3,7 +3,7 @@
 
 import java.util.*;
 
-public class c153_sumOfOddDigitsInNumber {
+public class c154_test_sumOfOddDigitsInNumber {
 
     public static void main(String[] args) throws Exception {
         Scanner scn = new Scanner(System.in);
