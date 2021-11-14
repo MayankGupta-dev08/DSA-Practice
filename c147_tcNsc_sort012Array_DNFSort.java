@@ -19,7 +19,7 @@ public class c147_tcNsc_sort012Array_DNFSort {
     // swap(arr[op] and arr[tp]) and only tp-- also condition will be op<tp
     public static void sort012Array(int[] arr) {
         int zp = 0, op = 0, tp = arr.length - 1;
-        while (op < tp) {
+        while (op <= tp) {
             if (arr[op] == 1) { // if(arr[i]>0)
                 op++;
             } else if (arr[op] == 0) { // else if (arr[i] <= 0)

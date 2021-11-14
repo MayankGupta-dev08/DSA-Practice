@@ -21,3 +21,9 @@ public class c109_recurrsion_printZigZag {
         System.out.print(n + " ");
     }
 }
+
+// Input
+// 3
+
+// Output
+// 3 2 1 1 1 2 1 1 1 2 3 2 1 1 1 2 1 1 1 2 3

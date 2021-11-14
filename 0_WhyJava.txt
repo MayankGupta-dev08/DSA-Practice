@@ -27,7 +27,7 @@ Why and How Java is platform independent?
     Java and JavaScript are interpreter based languages which need a browser to translate it and execute it in one go.
 
         Difference b/w compiler and interpreter
-        1. compiler comiles only once and makes an .exe and then it gets executed everytime we want to execute that code
+        1. compiler compiles only once and makes an .exe and then it gets executed everytime we want to execute that code
             where as interpreter translates everytime we want to execute our code
         2.  complier generates a seperate machine code file where as interpreter doesn't.
         3.  compiled programs can run independently (independent of compiler once compiled.), interpreted programs can't.
