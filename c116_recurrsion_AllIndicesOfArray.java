@@ -27,7 +27,7 @@ public class c116_recurrsion_AllIndicesOfArray {
 
     public static int[] allIndices_recurrsion(int[] arr, int key, int idx, int fsf) {
         if (idx == arr.length) {
-            return new int[fsf];
+            return new int[fsf];    // after whole array is checked, and we have got the size of iarr which will be = fsf
         }
 
         if (arr[idx] == key) {

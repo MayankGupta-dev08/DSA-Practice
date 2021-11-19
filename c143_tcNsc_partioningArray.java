@@ -1,3 +1,7 @@
+/* The main logic of this program is that we will get one element from the user which will definately be present in the array. So, we will partition the array in such a way that the pivot element reaches to its correct position if the array had been sorted and all the elements present in the array before it will be smaller or eqaul to pivot and all elements after pivot's position will be grater than it.
+
+Note - Keep in mind that it won't sort the whole array, but placing the pivot to its correct place and all before it is smaller and after it is grater than it.*/
+
 import java.util.*;
 
 public class c143_tcNsc_partioningArray {

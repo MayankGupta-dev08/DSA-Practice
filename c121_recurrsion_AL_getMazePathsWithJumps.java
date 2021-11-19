@@ -58,3 +58,10 @@ public class c121_recurrsion_AL_getMazePathsWithJumps {
         return myPaths;
     }
 }
+
+// Input
+// 2
+// 3
+
+// Output
+// [h1h1v1, h1v1h1, h1d1, h2v1, v1h1h1, v1h2, d1h1]
