@@ -19,7 +19,7 @@ public class c151_tcNts_sortDates {
         // in radix sort, firstly choose part which has least priority and then move
         // from least to most priority, so in numbers it was places of O, T, H where
         // Hundred's places had most priority
-        // in dates year has most, followed by months and then year
+        // in dates year has most, followed by months and then days
 
         countSort(arr, 1000000, 100, 32); // for days
         countSort(arr, 10000, 100, 13); // for months

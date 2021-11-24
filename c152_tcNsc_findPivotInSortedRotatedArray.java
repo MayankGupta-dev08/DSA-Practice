@@ -1,6 +1,4 @@
-/* Pivot element is that element in the sorted rotated array which is the minimum element in the array, ie. (whose index was 0 before rotation of sorted array). 
-After sorting its index becomes the number of times rotation happens. 
-
+/* Pivot element is that element in the sorted rotated array which is the minimum value in the array, ie. (whose index was 0 before rotation of sorted array was done) and After sorting its index becomes the number of times rotation happens. 
     Crux:
         1. pivot element = min element
         2. pivot idx = number of times sorted array is rotated */
