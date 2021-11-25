@@ -53,6 +53,7 @@ public class c171_stack_infixEvaluation {
                     int res = operation(v1, v2, optr);
                     operands.push(res);
                 }
+                // the very first operator will be pushed directly to the stack
                 // now ch will be pushed in operators Stack
                 operators.push(ch);
             }
