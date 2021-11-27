@@ -23,12 +23,10 @@ public class c180_stack_buildNormalStack {
         }
 
         int size() {
-            // write ur code here
             return tos + 1;
         }
 
         void display() {
-            // write ur code here
             for (int i = tos; i >= 0; i--) {
                 System.out.print(data[i] + " ");
             }
@@ -36,7 +34,6 @@ public class c180_stack_buildNormalStack {
         }
 
         void push(int val) {
-            // write ur code here
             if (tos == data.length - 1) {
                 System.out.println("Stack overflow");
             } else {
@@ -46,7 +43,6 @@ public class c180_stack_buildNormalStack {
         }
 
         int pop() {
-            // write ur code here
             if (tos == -1) {
                 System.out.println("Stack underflow");
                 return -1;
@@ -58,7 +54,6 @@ public class c180_stack_buildNormalStack {
         }
 
         int top() {
-            // write ur code here
             if (tos == -1) {
                 System.out.println("Stack underflow");
                 return -1;

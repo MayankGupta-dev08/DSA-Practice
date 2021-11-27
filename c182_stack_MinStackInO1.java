@@ -32,7 +32,6 @@ public class c182_stack_MinStackInO1 {
         }
 
         void push(int val) {
-            // write your code here
             if (allData.size() == 0 || val <= minData.peek()) {
                 allData.push(val);
                 minData.push(val);
@@ -42,7 +41,6 @@ public class c182_stack_MinStackInO1 {
         }
 
         int pop() {
-            // write your code here
             if (allData.size() == 0) {
                 System.out.println("Stack underflow");
                 return -1;
@@ -56,7 +54,6 @@ public class c182_stack_MinStackInO1 {
         }
 
         int top() {
-            // write your code here
             if (allData.size() == 0) {
                 System.out.println("Stack underflow");
                 return -1;
@@ -65,7 +62,6 @@ public class c182_stack_MinStackInO1 {
         }
 
         int min() {
-            // write your code here
             if (minData.size() == 0) {
                 System.out.println("Stack underflow");
                 return -1;

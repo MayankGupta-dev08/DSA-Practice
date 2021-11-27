@@ -28,12 +28,10 @@ public class c183_stack_MinStackInConstantSpace {
         }
 
         int size() {
-            // write your code here
             return data.size();
         }
 
         void push(int val) {
-            // write your code here
             if (data.size() == 0) {
                 min = val;
                 data.push(val);
@@ -47,7 +45,6 @@ public class c183_stack_MinStackInConstantSpace {
         }
 
         int pop() {
-            // write your code here
             if (data.size() == 0) {
                 System.out.println("Stack underflow");
                 return -1;
@@ -64,7 +61,6 @@ public class c183_stack_MinStackInConstantSpace {
         }
 
         int top() {
-            // write your code here
             if (data.size() == 0) {
                 System.out.println("Stack underflow");
                 return -1;
@@ -78,7 +74,6 @@ public class c183_stack_MinStackInConstantSpace {
         }
 
         int min() {
-            // write your code here
             if (data.size() == 0) {
                 System.out.println("Stack underflow");
                 return -1;
