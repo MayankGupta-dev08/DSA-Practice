@@ -35,7 +35,7 @@ public class c190_stack_twoStacksInAnArrray {
         }
 
         void push1(int val) {
-            if (tos1 + tos2 == data.length) {
+            if (size1() + size2() == data.length) {
                 System.out.println("Stack1 overflow");
             } else {
                 tos1++;
@@ -44,7 +44,7 @@ public class c190_stack_twoStacksInAnArrray {
         }
 
         void push2(int val) {
-            if (tos1 + tos2 == data.length) {
+            if (size1() + size2() == data.length) {
                 System.out.println("Stack2 overflow");
             } else {
                 tos2--;
