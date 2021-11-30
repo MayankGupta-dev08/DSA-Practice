@@ -1,7 +1,7 @@
 // import java.io.*;
 // import java.util.*;
 
-public class c191_LList_basicsOfLinkedList {
+public class c192_LList_reverseLListIteratively {
     public static class Node {
         int data;
         Node next;
@@ -183,6 +183,59 @@ public class c191_LList_basicsOfLinkedList {
                 size--;
             }
         }
+
+        // for reversing the linked list iteratively using data only
+        private Node getNodeAt(int idx) {
+            Node temp = head;
+            for (int i = 0; i < idx; i++) {
+                temp = temp.next;
+            }
+            return temp;
+        }
+
+        void reverseLL_dataIterative() {
+            if (size == 0) {
+                System.out.println("List is empty");
+                return;
+            } else if (size == 1) {
+                return;
+            } else {
+                int li = 0;
+                int ri = size - 1;
+
+                while (li < ri) {
+                    Node left = getNodeAt(li);
+                    Node right = getNodeAt(ri);
+
+                    int temp = left.data;
+                    left.data = right.data;
+                    right.data = temp;
+
+                    li++;
+                    ri--;
+                }
+
+            }
+        }
+
+        // using two node pointers -> prev and curr 
+        void reverseLL_pointerIterative() {
+            Node prev = null;
+            Node curr = head;
+
+            while (curr != null) {
+                Node temp = curr.next;
+
+                curr.next = prev;
+                prev = curr;
+                curr = temp;
+            }
+
+            Node temp = head;
+            head = tail;
+            tail = temp;
+        }
+
     }
 
     public static void main(String[] args) {
