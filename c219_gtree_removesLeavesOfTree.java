@@ -1,10 +1,9 @@
 import java.util.*;
 
-public class c210_gtree_displayOfTree {
-
-    public static class Node {
+public class c219_gtree_removesLeavesOfTree {
+    private static class Node {
         int data;
-        ArrayList<Node> children = new ArrayList<Node>();
+        ArrayList<Node> children = new ArrayList<>();
     }
 
     public static Node constructGenericTree(int[] arr) {
@@ -44,26 +43,26 @@ public class c210_gtree_displayOfTree {
         }
     }
 
-    public static void main(String[] args) {
+    public static void removeLeaves(Node node) {
+        for (int i = node.children.size() - 1; i >= 0; i--) {
+            Node child = node.children.get(i);
+            if (child.children.size() == 0) {
+                node.children.remove(child);
+            }
+        }
+
+        for (Node child : node.children) {
+            removeLeaves(child);
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
         int[] arr = { 10, 20, 50, -1, 60, -1, -1, 30, 70, -1, 80, 110, -1, 120, -1, -1, 90, -1, -1, 40, 100, -1, -1,
                 -1 };
 
         Node root = constructGenericTree(arr);
+        removeLeaves(root);
         display(root);
     }
-}
 
-/*
- * 10 -> 20, 30, 40, .
- * 20 -> 50, 60, .
- * 50 -> .
- * 60 -> .
- * 30 -> 70, 80, 90, .
- * 70 -> .
- * 80 -> 110, 120, .
- * 110 -> .
- * 120 -> .
- * 90 -> .
- * 40 -> 100, .
- * 100 -> .
- */
+}

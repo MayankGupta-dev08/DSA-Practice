@@ -101,7 +101,6 @@ public class c215_gtree_levelOrderTraversal {
             }
         }
         System.out.print(".");
-
     }
 
     public static void main(String[] args) {

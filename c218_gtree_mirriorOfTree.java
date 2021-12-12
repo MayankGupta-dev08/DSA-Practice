@@ -1,10 +1,9 @@
 import java.util.*;
 
-public class c210_gtree_displayOfTree {
-
-    public static class Node {
+public class c218_gtree_mirriorOfTree {
+    private static class Node {
         int data;
-        ArrayList<Node> children = new ArrayList<Node>();
+        ArrayList<Node> children = new ArrayList<>();
     }
 
     public static Node constructGenericTree(int[] arr) {
@@ -44,26 +43,48 @@ public class c210_gtree_displayOfTree {
         }
     }
 
-    public static void main(String[] args) {
+    public static void mirror(Node node) {
+        for (Node child : node.children) {
+            mirror(child);
+        }
+        Collections.reverse(node.children);
+    }
+
+    public static void main(String[] args) throws Exception {
         int[] arr = { 10, 20, 50, -1, 60, -1, -1, 30, 70, -1, 80, 110, -1, 120, -1, -1, 90, -1, -1, 40, 100, -1, -1,
                 -1 };
 
         Node root = constructGenericTree(arr);
         display(root);
+        mirror(root);
+        display(root);
     }
+
 }
 
-/*
- * 10 -> 20, 30, 40, .
- * 20 -> 50, 60, .
- * 50 -> .
- * 60 -> .
- * 30 -> 70, 80, 90, .
- * 70 -> .
- * 80 -> 110, 120, .
- * 110 -> .
- * 120 -> .
- * 90 -> .
- * 40 -> 100, .
- * 100 -> .
- */
+/* 
+10 -> 20, 30, 40, .
+20 -> 50, 60, .
+50 -> .
+60 -> .
+30 -> 70, 80, 90, .
+70 -> .
+80 -> 110, 120, .
+110 -> .
+120 -> .
+90 -> .
+40 -> 100, .
+100 -> .
+10 -> 40, 30, 20, .
+40 -> 100, .
+100 -> .
+30 -> 90, 80, 70, .
+90 -> .
+80 -> 120, 110, .
+120 -> .
+110 -> .
+70 -> .
+20 -> 60, 50, .
+60 -> .
+50 -> . 
+*/

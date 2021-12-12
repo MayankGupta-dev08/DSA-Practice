@@ -49,17 +49,13 @@ public class c211_gtree_sizeOfTree {
     }
 
     public static int sizeOfGTree(Node node) {
-        if (node == null) {
-            return 0;
-        }
-
-        int s = 1;
+        int s = 0;
         for (Node child : node.children) {
             int cs = sizeOfGTree(child);
             s += cs;
         }
 
-        return s;
+        return s + 1;
     }
 
     public static void main(String[] args) {
