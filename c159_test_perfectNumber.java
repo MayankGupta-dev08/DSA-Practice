@@ -7,9 +7,9 @@ public class c159_test_perfectNumber {
         scn.close();
 
         if (isPerfectNumber(n)) {
-            System.out.println("Perfect");
+            System.out.println("Perfect Number");
         } else {
-            System.out.println("Not Perfect");
+            System.out.println("Not Perfect Number");
         }
     }
 
