@@ -2,7 +2,7 @@ import java.util.*;
 
 public class c210_gtree_displayOfTree {
 
-    public static class Node {
+    private static class Node {
         int data;
         ArrayList<Node> children = new ArrayList<Node>();
     }

@@ -2,7 +2,7 @@ import java.util.*;
 
 public class c209_gtree_constructTreeUsingArray {
 
-    public static class Node {
+    private static class Node {
         int data;
         ArrayList<Node> children = new ArrayList<Node>();
     }
@@ -32,6 +32,11 @@ public class c209_gtree_constructTreeUsingArray {
     }
 
     public static void main(String[] args) {
+        
+        // the array for constructing the generic tree is based on the euler path where -
+        // -    first node will be root node
+        // -    consecutive node will be the child node of the prev node untill -1 is encountered
+        // - as soon as -1 is encountered this means next number will be used for the same level
         int[] arr = { 10, 20, 50, -1, 60, -1, -1, 30, 70, -1, 80, 110, -1, 120, -1, -1, 90, -1, -1, 40, 100, -1, -1,
                 -1 };
 
