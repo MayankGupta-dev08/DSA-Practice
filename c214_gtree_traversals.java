@@ -65,8 +65,6 @@ public class c214_gtree_traversals {
         return nmax;
     }
 
-    // finding height in terms of nodes
-    // if we have to find in terms of edges than use -1;
     public static int heightTree(Node node) {
         int ht = 0;
 
@@ -79,6 +77,7 @@ public class c214_gtree_traversals {
         return ht;
     }
 
+    
     public static void traversals(Node node) {
         System.out.println("Node Pre " + node.data);
         for (Node child : node.children) {

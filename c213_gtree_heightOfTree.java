@@ -67,7 +67,8 @@ public class c213_gtree_heightOfTree {
     }
 
     // finding height in terms of nodes
-    // if we have to find in terms of edges than use -1;
+    // if we have to find in terms of edges than we have to use the value of initial
+    // ht as -1;
     public static int heightTree(Node node) {
         int ht = 0;
 

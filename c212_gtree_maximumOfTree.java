@@ -54,6 +54,7 @@ public class c212_gtree_maximumOfTree {
         return s;
     }
 
+    // for max node value from the generic tree
     public static int maxOfTree(Node node) {
         int nmax = Integer.MIN_VALUE;
 

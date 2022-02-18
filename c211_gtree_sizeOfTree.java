@@ -4,7 +4,7 @@ import java.util.*;
 
 public class c211_gtree_sizeOfTree {
 
-    public static class Node {
+    private static class Node {
         int data;
         ArrayList<Node> children = new ArrayList<Node>();
     }
