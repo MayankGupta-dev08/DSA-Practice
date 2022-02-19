@@ -43,6 +43,9 @@ public class c219_gtree_removesLeavesOfTree {
         }
     }
 
+    // firstly we will check if a node's child has any children or not, if node's
+    // child is a leaf then remove it otherwise don't
+    // so for this case we can't work in post order, we have to do it in pre order
     public static void removeLeaves(Node node) {
         for (int i = node.children.size() - 1; i >= 0; i--) {
             Node child = node.children.get(i);

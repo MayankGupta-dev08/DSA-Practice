@@ -43,6 +43,10 @@ public class c218_gtree_mirriorOfTree {
         }
     }
 
+    // firstly we will expect the children of root node that all mirror their
+    // children
+    // then we will reverse the children of the root node, so this will work in post
+    // order area
     public static void mirror(Node node) {
         for (Node child : node.children) {
             mirror(child);
@@ -62,29 +66,29 @@ public class c218_gtree_mirriorOfTree {
 
 }
 
-/* 
-10 -> 20, 30, 40, .
-20 -> 50, 60, .
-50 -> .
-60 -> .
-30 -> 70, 80, 90, .
-70 -> .
-80 -> 110, 120, .
-110 -> .
-120 -> .
-90 -> .
-40 -> 100, .
-100 -> .
-10 -> 40, 30, 20, .
-40 -> 100, .
-100 -> .
-30 -> 90, 80, 70, .
-90 -> .
-80 -> 120, 110, .
-120 -> .
-110 -> .
-70 -> .
-20 -> 60, 50, .
-60 -> .
-50 -> . 
-*/
+/*
+ * 10 -> 20, 30, 40, .
+ * 20 -> 50, 60, .
+ * 50 -> .
+ * 60 -> .
+ * 30 -> 70, 80, 90, .
+ * 70 -> .
+ * 80 -> 110, 120, .
+ * 110 -> .
+ * 120 -> .
+ * 90 -> .
+ * 40 -> 100, .
+ * 100 -> .
+ * 10 -> 40, 30, 20, .
+ * 40 -> 100, .
+ * 100 -> .
+ * 30 -> 90, 80, 70, .
+ * 90 -> .
+ * 80 -> 120, 110, .
+ * 120 -> .
+ * 110 -> .
+ * 70 -> .
+ * 20 -> 60, 50, .
+ * 60 -> .
+ * 50 -> .
+ */
