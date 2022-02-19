@@ -91,7 +91,7 @@ public class c215_gtree_levelOrderTraversal {
         Queue<Node> que = new ArrayDeque<>();
         que.add(node);
 
-        // remove -> print --> add child
+        // remove -> print --> add child = rpa
         while (que.size() > 0) {
             Node n = que.remove();
             System.out.print(n.data + " ");
@@ -108,15 +108,15 @@ public class c215_gtree_levelOrderTraversal {
                 -1 };
 
         Node root = constructGenericTree(arr);
-        
+
         // display(root);
-        
+
         // int sz = sizeOfGTree(root);
         // System.out.println("size of tree: " + sz);
 
         // int ans = maxOfTree(root);
         // System.out.println("maximum of tree: " + ans);
-        
+
         // traversals(root);
 
         levelOrderTraversal(root);
