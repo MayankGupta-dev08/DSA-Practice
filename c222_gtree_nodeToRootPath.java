@@ -88,7 +88,7 @@ public class c222_gtree_nodeToRootPath {
         scn.close();
         if (findElement(root, key)) {
             System.out.println("Key Found");
-            System.out.println(nodeToRootPath(root, key));
+            System.out.println("Node to root path -> "+ nodeToRootPath(root, key));
         } else {
             System.out.println("Key not Found");
         }
