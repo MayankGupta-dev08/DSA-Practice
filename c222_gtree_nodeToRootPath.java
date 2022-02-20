@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class c221_gtree_findElementInTree {
+public class c222_gtree_nodeToRootPath {
     private static class Node {
         int data;
         ArrayList<Node> children = new ArrayList<>();
@@ -54,8 +54,26 @@ public class c221_gtree_findElementInTree {
                 return true;
             }
         }
-        
+
         return false;
+    }
+
+    public static ArrayList<Integer> nodeToRootPath(Node node, int key) {
+        if (node.data == key) {
+            ArrayList<Integer> list = new ArrayList<Integer>();
+            list.add(node.data);
+            return list;
+        }
+
+        for (Node child : node.children) {
+            ArrayList<Integer> ptc = nodeToRootPath(child, key);
+            if (ptc.size() > 0) {
+                ptc.add(node.data);
+                return ptc;
+            }
+        }
+
+        return new ArrayList<>();
     }
 
     public static void main(String[] args) {
@@ -70,6 +88,7 @@ public class c221_gtree_findElementInTree {
         scn.close();
         if (findElement(root, key)) {
             System.out.println("Key Found");
+            System.out.println(nodeToRootPath(root, key));
         } else {
             System.out.println("Key not Found");
         }
