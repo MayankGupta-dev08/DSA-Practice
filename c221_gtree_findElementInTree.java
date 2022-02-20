@@ -49,7 +49,10 @@ public class c221_gtree_findElementInTree {
         }
 
         for (Node child : node.children) {
-
+            boolean fic = findElement(child, key);
+            if (fic) {
+                return true;
+            }
         }
         
         return false;
