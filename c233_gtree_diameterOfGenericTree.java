@@ -44,8 +44,30 @@ public class c233_gtree_diameterOfGenericTree {
         }
     }
 
-    public static int diameterOfTree(Node node) {
-        
+    private static int dia = 0;
+
+    // using travel and change along with finding ans via returning something else
+    public static int calcDiaUsingHeight(Node node) {
+        int dch = -1; // deepest child height
+        int sdch = -1; // second deepest child height
+
+        for (Node child : node.children) {
+            int ch = calcDiaUsingHeight(child);
+
+            if (ch > dch) {
+                sdch = dch;
+                dch = ch;
+            } else if (ch > sdch) {
+                sdch = ch;
+            }
+        }
+
+        if (dia < dch + sdch + 2) {
+            dia = dch + sdch + 2;
+        }
+
+        dch += 1;
+        return dch; // returning the height of the node
     }
 
     public static void main(String[] args) {
@@ -53,10 +75,11 @@ public class c233_gtree_diameterOfGenericTree {
                 -1,
                 -1 };
         Node root = constructGenericTree(arr);
-
+        calcDiaUsingHeight(root);
+        System.out.println("Diameter of the tree = " + dia);
     }
 }
 
 /*
-
+ * Diameter of the tree = 5
  */
