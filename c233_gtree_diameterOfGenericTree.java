@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class c232_gtree_nodeWithMaxSubtreeSum {
+public class c233_gtree_diameterOfGenericTree {
 
     public static class Node {
         int data;
@@ -44,27 +44,8 @@ public class c232_gtree_nodeWithMaxSubtreeSum {
         }
     }
 
-    private static int ms = Integer.MIN_VALUE;
-    private static int msn = 0;
-
-    // in this question we are returning something else but our main ans is
-    // something else, our ans depends on the returned thing.
-    // here also we have employed travel and change strategy.
-    public static int nodeWithMaxSubtreeSum(Node node) {
-        int sum = 0;
-
-        for (Node child : node.children) {
-            int csum = nodeWithMaxSubtreeSum(child);
-            sum += csum;
-        }
-        sum += node.data;
-
-        if (sum > ms) {
-            ms = sum;
-            msn = node.data;
-        }
-
-        return sum;
+    public static int diameterOfTree(Node node) {
+        
     }
 
     public static void main(String[] args) {
@@ -72,9 +53,7 @@ public class c232_gtree_nodeWithMaxSubtreeSum {
                 -1,
                 -1 };
         Node root = constructGenericTree(arr);
-        nodeWithMaxSubtreeSum(root);
 
-        System.out.println(ms + "@" + msn);
     }
 }
 
