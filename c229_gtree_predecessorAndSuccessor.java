@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class c228_gtree_multiSolver {
+public class c229_gtree_predecessorAndSuccessor {
 
     public static class Node {
         int data;
@@ -45,21 +45,25 @@ public class c228_gtree_multiSolver {
     }
 
     // all these are in heap
-    private static int sze;
-    private static int minn;
-    private static int maxx;
-    private static int height;
+    private static Node predecessor;
+    private static Node successor;
+    private static int state;
 
-    // depth remains in stack
-    // in this question we have used travel and change strategy
-    public static void multisolver(Node node, int depth) {
-        sze++;
-        minn = Integer.min(minn, node.data);
-        maxx = Integer.max(maxx, node.data);
-        height = Integer.max(height, depth);
+    // in this question also, we have used travel and change strategy
+    public static void predecessorAndSuccessor(Node node, int key) {
+        if (state == 0) {
+            if (node.data == key) {
+                state = 1;
+            } else {
+                predecessor = node;
+            }
+        } else if (state == 1) {
+            successor = node;
+            state = 2;
+        }
 
         for (Node child : node.children) {
-            multisolver(child, depth + 1);
+            predecessorAndSuccessor(child, key);
         }
     }
 
@@ -68,23 +72,32 @@ public class c228_gtree_multiSolver {
                 -1 };
         Node root = constructGenericTree(arr);
 
-        sze = 0;
-        height = 0;
-        minn = Integer.MAX_VALUE;
-        maxx = Integer.MIN_VALUE;
+        System.out.println("Enter the key value for predecessor and successor");
+        Scanner scn = new Scanner(System.in);
+        int key = scn.nextInt();
+        scn.close();
+        successor = null;
+        predecessor = null;
+        state = 0;
+        predecessorAndSuccessor(root, key);
 
-        multisolver(root, 0);
+        if (predecessor == null) {
+            System.out.println("Predecessor not found");
+        } else {
+            System.out.println("predecessor = " + predecessor.data);
+        }
 
-        System.out.println("size = " + sze);
-        System.out.println("height = " + height);
-        System.out.println("minn = " + minn);
-        System.out.println("maxx = " + maxx);
+        if (successor == null) {
+            System.out.println("Successor not found");
+        } else {
+            System.out.println("successor = " + successor.data);
+        }
     }
 }
 
 /*
- * size = 12
- * height = 3
- * minn = 10
- * maxx = 120
+ * Enter the key value for predecessor and successor
+ * 90
+ * predecessor = 120
+ * successor = 40
  */
