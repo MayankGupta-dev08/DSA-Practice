@@ -49,8 +49,7 @@ public class c222_gtree_nodeToRootPath {
         }
 
         for (Node child : node.children) {
-            boolean fic = findElement(child, key);
-            if (fic) {
+            if (findElement(child, key)) {
                 return true;
             }
         }
