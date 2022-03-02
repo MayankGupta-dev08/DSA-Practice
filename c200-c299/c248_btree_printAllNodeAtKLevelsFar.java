@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class c247_btree_printAllAtKLevel {
+public class c248_btree_printAllNodeAtKLevelsFar {
 
     public static class Node {
         int data;
@@ -78,42 +78,72 @@ public class c247_btree_printAllAtKLevel {
         displayBTree(node.right);
     }
 
-    public static int htOfBTree(Node node) {
+    public static ArrayList<Node> node2rootPath(Node node, int key) {
         if (node == null) {
-            return 0;
+            return new ArrayList<>();
         }
 
-        return Math.max(htOfBTree(node.left), htOfBTree(node.right)) + 1;
+        if (node.data == key) {
+            var list = new ArrayList<Node>();
+            list.add(node);
+            return list;
+        }
+
+        var lpath = node2rootPath(node.left, key);
+        if (lpath.size() > 0) {
+            lpath.add(node);
+            return lpath;
+        }
+
+        var rpath = node2rootPath(node.right, key);
+        if (rpath.size() > 0) {
+            rpath.add(node);
+            return rpath;
+        }
+
+        return new ArrayList<>();
     }
 
-    public static void printAllAtKLevel(Node node, int k) {
-        if (node == null || k < 0) {
+    public static void printAllAtKLevelDown(Node node, int k, Node blocker) {
+        if (node == null || k < 0 || node == blocker) {
             return;
         }
 
         if (k == 0) {
-            System.out.print(node.data + " ");
+            System.out.println(node.data);
         }
 
-        printAllAtKLevel(node.left, k - 1);
-        printAllAtKLevel(node.right, k - 1);
+        printAllAtKLevelDown(node.left, k - 1, blocker);
+        printAllAtKLevelDown(node.right, k - 1, blocker);
+    }
+
+    public static void printAllNodeAtKLevelsFar(Node node, int key, int k) {
+        var pathOfKey = node2rootPath(node, key);
+        for (int i = 0; i < pathOfKey.size(); i++) {
+            printAllAtKLevelDown(pathOfKey.get(i), k - i, i == 0 ? null : pathOfKey.get(i - 1));
+        }
     }
 
     public static void main(String[] args) {
         Integer[] arr = { 50, 25, 12, null, null, 37, 30, null, null, null, 75, 62, null, 70, null, null, 87, null,
                 null };
         Node root = bTreeConstructor(arr);
-        int maxVal = htOfBTree(root);
-        System.out.println("Enter the value of k from 0 to " + (maxVal - 1));
         Scanner scn = new Scanner(System.in);
+        int key = scn.nextInt();
         int k = scn.nextInt();
         scn.close();
-        printAllAtKLevel(root, k);
+        printAllNodeAtKLevelsFar(root, key, k);
     }
 }
 
+// Input
 /*
- * Enter the value of k from 0 to 3
+ * 37
  * 2
- * 12 37 62 87
+ */
+
+// Output
+ /*
+ * 12
+ * 50
  */
