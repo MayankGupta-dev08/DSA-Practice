@@ -83,14 +83,21 @@ public class c252_btree_printSingleChildNodes {
             return;
         }
 
-        if((node.left!=null && node.right==null))
+        if (node.left != null && node.right == null) {
+            System.out.println(node.left.data);
+        } else if (node.left == null && node.right != null) {
+            System.out.println(node.right.data);
+        }
+
+        printSingleChildNodes(node.left);
+        printSingleChildNodes(node.right);
     }
 
     public static void main(String[] args) {
-        Integer[] arr = { 50, 25, 12, null, null, 37, 30, null, null, 40, null, null, 75, 62, 60, null, null, 70, null,
-                null, 87, null, null };
+        Integer[] arr = { 50, 25, 12, null, null, 37, 30, null, null, null, 75, 62, 60, null, null, null, null };
 
         Node root = bTreeConstructor(arr);
-        printSingleChildNodes(root, null);
+        displayBTree(root);
+        printSingleChildNodes(root);
     }
 }
