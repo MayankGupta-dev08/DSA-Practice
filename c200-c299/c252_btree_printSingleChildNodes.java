@@ -78,6 +78,7 @@ public class c252_btree_printSingleChildNodes {
         displayBTree(node.right);
     }
 
+    // printing those child nodes whose parent have only single node
     public static void printSingleChildNodes(Node node) {
         if (node == null) {
             return;
