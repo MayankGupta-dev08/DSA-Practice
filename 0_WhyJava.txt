@@ -33,5 +33,5 @@ Why and How Java is platform independent?
         3.  compiled programs can run independently (independent of compiler once compiled.), interpreted programs can't.
         4.  compiled programs are faster as they run independently, interpreted programs runs slower as they run inside the interpreter.
     
-    Java is a hybrid language which uses both compiler and interpreter.
+    Java is a hybrid language which uses both compiler and interpreter ❤️.
         Firstly, our source code is compiled by compiler to make it into a byte code (not macine code) which is error free and then the interpreter (jvm) converts it into a machine code and execute it also.
