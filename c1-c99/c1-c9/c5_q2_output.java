@@ -21,5 +21,7 @@ public class c5_q2_output {
 }
 
 /*
- * 11 is good. 21 is bad. 31 is good.
+ * 11 is good.
+ * 21 is bad.
+ * 31 is good.
  */
