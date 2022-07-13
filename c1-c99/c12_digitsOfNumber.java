@@ -5,27 +5,36 @@ public class c12_digitsOfNumber {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         scn.close();
-        int num=n, count=0;
-        while(num!=0){
-            num=num/10;
+        digitsOfNumber(n);
+    }
+
+    public static int countDigits(int num) {
+        int count = 0;
+        while (num > 0) {
+            num = num / 10;
             count++;
         }
+        return count;
+    }
 
-        int divisor = (int) Math.pow(10, count-1);
-        while(divisor!=0){
-            System.out.println(n/divisor);
-            n=n%divisor;
-            divisor=divisor/10;
+    public static void digitsOfNumber(int num) {
+        int count = countDigits(num);
+
+        int divisor = (int) Math.pow(10, count - 1);
+        while (divisor != 0) {
+            System.out.println(num / divisor);
+            num = num % divisor;
+            divisor = divisor / 10;
         }
     }
 }
 
 /*
-564321
-5
-6
-4
-3
-2
-1
-*/
+ * 564321
+ * 5
+ * 6
+ * 4
+ * 3
+ * 2
+ * 1
+ */
