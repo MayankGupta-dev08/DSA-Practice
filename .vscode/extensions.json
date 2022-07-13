@@ -1,3 +1,6 @@
 {
-    "recommendations": ["ms-vsliveshare.vsliveshare-pack"]
+    "recommendations": [
+        "ms-vsliveshare.vsliveshare-pack",
+        "MS-vsliveshare.vsliveshare-pack"
+    ]
 }
