@@ -14,15 +14,18 @@ public class c14_inverseNumber {
         int n = scn.nextInt();
         scn.close();
 
-        int ans=0, count=0;
-        while(n>0){
-            int r = n%10;
-            n=n/10;
-            count++;
-            ans=ans+ (count* (int)Math.pow(10, r-1));
-        }
+        System.out.println(inverseNum(n));
+    }
 
-        System.out.println(ans);
+    public static int inverseNum(int n) {
+        int ans = 0, count = 0;
+        while (n > 0) {
+            int r = n % 10;
+            n = n / 10;
+            count++;
+            ans = ans + (count * (int) Math.pow(10, r - 1));
+        }
+        return ans;
     }
 }
 

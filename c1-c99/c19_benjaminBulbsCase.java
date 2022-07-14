@@ -19,17 +19,17 @@ public class c19_benjaminBulbsCase {
         int n = scn.nextInt();
         scn.close();
         System.out.println("bulbs which will remain ON");
-        for (int i = 1; i*i <= n; i++) {
-            System.out.println(i*i);
+        for (int i = 1; i * i <= n; i++) {
+            System.out.println(i * i);
         }
     }
 }
 
 /*
-20
-bulbs which will remain ON
-1
-4
-9
-16
-*/
+ * 20
+ * bulbs which will remain ON
+ * 1
+ * 4
+ * 9
+ * 16
+ */

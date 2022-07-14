@@ -16,43 +16,53 @@ public class c15_rotateNumber {
         int num = scn.nextInt();
         int k = scn.nextInt();
         scn.close();
-        int temp = num, len=0;
-        while(temp!=0){
-            temp = temp/10;
+        int ans = rotateNum(num, k);
+        System.out.println("Rotated number: " + ans);
+    }
+
+    private static int countDigits(int num) {
+        int len = 0;
+        while (num != 0) {
+            num = num / 10;
             len++;
         }
-        if(num!=0 || len!=1){
-            while(k<0)
-                k=len+k;
-            
-            if(k>=len)
-                k=k%len;
-            
+        return len;
+    }
+
+    public static int rotateNum(int num, int k) {
+        int len = countDigits(num);
+
+        if (num != 0 || len != 1) {
+            while (k < 0) // correction1 for negative k
+                k = len + k;
+
+            if (k >= len) // correction2 for k>num_length
+                k = k % len;
+
             for (int i = 1; i <= k; i++) {
-                int r=num%10;
-                num=num/10;
-                num=num + (r * (int)Math.pow(10, len-1));
+                int r = num % 10;
+                num = num / 10;
+                num = num + (r * (int) Math.pow(10, len - 1));
             }
         }
-
-        System.out.println("Rotated number: "+num);
+        return num;
     }
 }
 
 /*
--123
-1
-Rotated number: -312
-*/
+ * -123
+ * 1
+ * Rotated number: -312
+ */
 
 /*
-5629842
-2
-Rotated number: 4256298
-*/
+ * 5629842
+ * 2
+ * Rotated number: 4256298
+ */
 
 /*
-5629842
--2
-Rotated number: 2984256
-*/
+ * 5629842
+ * -2
+ * Rotated number: 2984256
+ */
