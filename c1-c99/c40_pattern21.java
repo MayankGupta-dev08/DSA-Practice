@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class c40_pattern21 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
