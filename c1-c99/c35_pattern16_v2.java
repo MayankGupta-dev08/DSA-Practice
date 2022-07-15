@@ -1,7 +1,7 @@
 // Pascal Triangle
 import java.util.Scanner;
 
-public class c35_pattern16_better {
+public class c35_pattern16_v2 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
