@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class c8_isPrime {
+public class c8_isPrime_v1 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int t = scn.nextInt(); // how many numbers do we want to check for prime or not
