@@ -22,8 +22,8 @@ public class c138_tcNsc_bubbleSort {
     // so if n-1 largest elements are arranged then whole array is sorted, so total
     // outer iterations --> n-1
     public static void bubbleSort(int[] arr) {
-        for (int i = 1; i < arr.length; i++) {
-            for (int j = 0; j < arr.length - i; j++) {
+        for (int i = 0; i < arr.length-1; i++) {
+            for (int j = 0; j < arr.length-1 - i; j++) {
                 if (arr[j] > arr[j + 1]) {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
