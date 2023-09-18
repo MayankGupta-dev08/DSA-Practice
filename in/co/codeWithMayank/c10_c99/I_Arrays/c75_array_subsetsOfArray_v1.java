@@ -21,17 +21,19 @@ public class c75_array_subsetsOfArray_v1 {
             // converting the i to binary to further use them to obtain a subset for the array
             // Eg - N=3 --> total=8 --> 0 to 7 --> 000, 001, 010, 011, 100, 101, 110, 111
             int temp = i;
-            String set = "";
-            for (int j = arr.length - 1; j >= 0; j--) {
+            String subset = "";
+            // total bits for the binary number corresp to temp will be equal to total elems in arr
+            // since the form the binary num from left to right --> we need to traverse/fill in left to right order (trav from end to start)
+            for (int j = arr.length - 1; j < arr.length; j--) {
                 int r = temp % 2;
                 temp = temp / 2;
 
-                if (r == 0)
-                    set = "_ " + set;
-                else
-                    set = arr[j] + " " + set;
+                if (r == 0) // we won't add that number to subset
+                    subset = "_ " + subset;
+                else // we will add that number to subset
+                    subset = arr[j] + " " + subset;
             }
-            System.out.println(set);
+            System.out.println(subset);
         }
     }
 }
