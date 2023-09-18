@@ -19,7 +19,9 @@ public class c73_ceilAndFloorOfKeyInArray {
         int start = 0, end = arr.length-1;
         int fl = Integer.MIN_VALUE;
         int cl = Integer.MAX_VALUE;
-        
+
+        // when low/start is changed --> floor is set
+        // when high/end is changed --> ceil is set
         while(start<=end){
             int mid = start + (end-start)/2;
             if(arr[mid]==key){
