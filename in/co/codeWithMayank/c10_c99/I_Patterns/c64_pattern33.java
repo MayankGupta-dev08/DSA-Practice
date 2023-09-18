@@ -1,4 +1,4 @@
-package in.co.codeWithMayank.c10_c99;/* To write a program to print Pallindromic Pattern
+package in.co.codeWithMayank.c10_c99.I_Patterns;/* To write a program to print Pallindromic Pattern
 Enter the numbers of rows: 5
 
         1

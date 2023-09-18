@@ -1,4 +1,4 @@
-package in.co.codeWithMayank.c10_c99;// import java.io.*;
+package in.co.codeWithMayank.c10_c99.I_Arrays;// import java.io.*;
 import java.util.*;
 
 public class c52_arraysBasics01 {

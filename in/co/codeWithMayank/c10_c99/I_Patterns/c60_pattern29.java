@@ -1,4 +1,4 @@
-package in.co.codeWithMayank.c10_c99;/* To write a program to print 0-1 Pattern
+package in.co.codeWithMayank.c10_c99.I_Patterns;/* To write a program to print 0-1 Pattern
 Enter the numbers of rows: 5
 
 1                               (1,1)                           Considering

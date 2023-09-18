@@ -1,4 +1,4 @@
-package in.co.codeWithMayank.c10_c99;// inverted bar chart
+package in.co.codeWithMayank.c10_c99.I_Patterns;// inverted bar chart
 
 import java.util.*;
 public class c76_pattern36 {

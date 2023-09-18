@@ -1,4 +1,4 @@
-package in.co.codeWithMayank.c10_c99;/* We can easily do by few methods-
+package in.co.codeWithMayank.c10_c99.I_Arrays;/* We can easily do by few methods-
     1.  sort the array - O(nlogn)
     2.  firstly counting the 0s and 1s in first iterations and then adding that number of 0s and 1s in same array 
     3.  calculating the sum of array and then giving values to the same array

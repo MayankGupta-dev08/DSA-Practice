@@ -1,4 +1,4 @@
-package in.co.codeWithMayank.c10_c99;/* Constraints
+package in.co.codeWithMayank.c10_c99.I_Numbers;/* Constraints
 2 <= b <= 10 */
 
 import java.util.*;

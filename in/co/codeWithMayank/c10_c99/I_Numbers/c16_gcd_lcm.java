@@ -1,4 +1,4 @@
-package in.co.codeWithMayank.c10_c99;// gcd of two numbers = greatest common divisor or hcf
+package in.co.codeWithMayank.c10_c99.I_Numbers;// gcd of two numbers = greatest common divisor or hcf
 // lcm of two numbers = lowest common multiple
 
 import java.util.Scanner;

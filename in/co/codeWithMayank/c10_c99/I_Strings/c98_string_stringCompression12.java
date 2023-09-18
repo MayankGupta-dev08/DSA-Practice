@@ -1,4 +1,4 @@
-package in.co.codeWithMayank.c10_c99;/* String Compression
+package in.co.codeWithMayank.c10_c99.I_Strings;/* String Compression
 1. You are given a string. 
 2. You have to compress the given string in the following two ways - 
    First compression -> The string should be compressed such that consecutive duplicates of characters are replaced with a single character.

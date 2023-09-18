@@ -1,4 +1,4 @@
-package in.co.codeWithMayank.c10_c99;// print the table for a given number
+package in.co.codeWithMayank.c10_c99.I_Patterns;// print the table for a given number
 
 import java.util.*;
 

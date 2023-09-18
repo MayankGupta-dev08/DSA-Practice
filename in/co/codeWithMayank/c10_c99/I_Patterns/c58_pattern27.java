@@ -1,4 +1,4 @@
-package in.co.codeWithMayank.c10_c99;// modification to hollow square pattern
+package in.co.codeWithMayank.c10_c99.I_Patterns;// modification to hollow square pattern
 
 import java.util.*;
 public class c58_pattern27 {

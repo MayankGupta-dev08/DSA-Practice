@@ -1,4 +1,4 @@
-package in.co.codeWithMayank.c10_c99;// Radial Pattern
+package in.co.codeWithMayank.c10_c99.I_Patterns;// Radial Pattern
 // printing concentric rectangular pattern in a 2D matrix
 
 import java.util.*;

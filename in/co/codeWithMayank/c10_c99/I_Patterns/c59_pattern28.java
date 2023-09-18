@@ -1,4 +1,4 @@
-package in.co.codeWithMayank.c10_c99;// Butterfly Pattern
+package in.co.codeWithMayank.c10_c99.I_Patterns;// Butterfly Pattern
 
 import java.util.*;
 public class c59_pattern28 {

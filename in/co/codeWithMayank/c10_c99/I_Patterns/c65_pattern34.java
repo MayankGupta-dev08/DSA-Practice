@@ -1,4 +1,4 @@
-package in.co.codeWithMayank.c10_c99;/* To write a program to print Zig-Zag Pattern
+package in.co.codeWithMayank.c10_c99.I_Patterns;/* To write a program to print Zig-Zag Pattern
 Fixed numbers of rows: 3
 Enter the numbers of stars: (Ask from user)
 

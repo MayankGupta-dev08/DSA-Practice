@@ -1,4 +1,4 @@
-package in.co.codeWithMayank.c10_c99;
+package in.co.codeWithMayank.c10_c99.I_Patterns;
 
 import java.util.*;
 public class c42_pattern23_v1 {

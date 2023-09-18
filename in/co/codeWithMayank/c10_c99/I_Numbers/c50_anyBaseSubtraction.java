@@ -1,4 +1,4 @@
-package in.co.codeWithMayank.c10_c99;/* Any Base Subtraction
+package in.co.codeWithMayank.c10_c99.I_Numbers;/* Any Base Subtraction
     1. You are given a base b.
     2. You are given two numbers n1 and n2 of base b.
     3. You are required to subtract n1 from n2 and print the value.

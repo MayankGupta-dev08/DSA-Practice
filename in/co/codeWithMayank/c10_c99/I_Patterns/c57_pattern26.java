@@ -1,4 +1,4 @@
-package in.co.codeWithMayank.c10_c99;// Character Pattern
+package in.co.codeWithMayank.c10_c99.I_Patterns;// Character Pattern
 import java.util.*;
 
 public class c57_pattern26 {

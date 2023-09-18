@@ -1,4 +1,4 @@
-package in.co.codeWithMayank.c10_c99;
+package in.co.codeWithMayank.c10_c99.I_Arrays;
 
 import java.util.*;
 public class c74_array_firstAndLastOccurrenceOfKey {

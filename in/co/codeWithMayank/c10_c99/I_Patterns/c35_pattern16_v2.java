@@ -1,4 +1,4 @@
-package in.co.codeWithMayank.c10_c99;// Pascal Triangle
+package in.co.codeWithMayank.c10_c99.I_Patterns;// Pascal Triangle
 import java.util.Scanner;
 
 public class c35_pattern16_v2 {
