@@ -24,7 +24,7 @@ public class c75_array_subsetsOfArray_v1 {
             String subset = "";
             // total bits for the binary number corresp to temp will be equal to total elems in arr
             // since the form the binary num from left to right --> we need to traverse/fill in left to right order (trav from end to start)
-            for (int j = arr.length - 1; j < arr.length; j--) {
+            for (int j = arr.length - 1; j >= 0; j--) {
                 int r = temp % 2;
                 temp = temp / 2;
 
